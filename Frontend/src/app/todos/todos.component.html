@@ -1,0 +1,17 @@
+<section class="todoapp">
+  <header class="header">
+    <h1>todos</h1>
+    <input [formControl]="todoText" class="new-todo" placeholder="新增工作項目" autofocus (keyup.enter)="addTodo()" />
+  </header>
+  <section class="main">
+    <input id="toggle-all" class="toggle-all" type="checkbox" />
+    <ul class="todo-list" *ngFor="let todo of todos">
+      <li [class.completed]="todo.completed">
+        <div class="view">
+          <input class="toggle" type="checkbox" [checked]="todo.completed" (change)="toggleComplete(todo)" />
+            <label>{{ todo.text }}</label>
+        </div>
+      </li>
+    </ul>
+  </section>
+</section>

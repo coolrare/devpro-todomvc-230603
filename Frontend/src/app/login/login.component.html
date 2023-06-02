@@ -1,0 +1,11 @@
+<section class="todoapp">
+  <header class="header">
+    <h1>Login</h1>
+  </header>
+  <form [formGroup]="user" class="main" (ngSubmit)="login()">
+    <input name="username" formControlName="username" type="text" class="login-control" placeholder="Username" autofocus>
+    <input name="password" formControlName="password" type="password" class="login-control" placeholder="Password">
+    <button class="login-button">Login</button>
+  </form>
+</section>
+
