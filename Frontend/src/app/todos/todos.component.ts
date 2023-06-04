@@ -34,7 +34,7 @@ export class TodosComponent implements OnInit {
   }
 
   addTodo() {
-    if (this.todoText) {
+    if (this.todoText.value) {
       this.loadingService.loading();
       this.todosService.addTodo(this.todoText.value || '').subscribe(() => {
         this.loadTodos();

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Backend.Services
 {
-    public class AuthService : IAuthService
+    public class AuthService
     {
         private readonly IConfiguration configuration;
         private readonly TodoListContext todoListContext;

@@ -10,9 +10,9 @@ namespace Backend.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private readonly IAuthService authService;
+        private readonly AuthService authService;
 
-        public LoginController(IAuthService authService)
+        public LoginController(AuthService authService)
         {
             this.authService = authService;
         }
